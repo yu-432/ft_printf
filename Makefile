@@ -6,13 +6,13 @@
 #    By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/07 14:59:59 by yooshima          #+#    #+#              #
-#    Updated: 2024/05/07 16:07:23 by yooshima         ###   ########.fr        #
+#    Updated: 2024/05/08 11:21:50 by yooshima         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libftprintf.a
 
-SRCS		= ft_printf.c
+SRCS		= ft_printf.c put_hex.c put_int_char.c
 
 OBJS		= ${SRCS:.c=.o}
 
