@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 10:48:58 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/08 14:20:57 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/08 16:21:14 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,13 @@ int	put_str(char *s)
 {
 	int	len;
 
-	len = ft_strlen(s);
-	write(1, s, len);
+	if (!s)
+		len = write(1, "(null)", 6);
+	else
+	{
+		len = ft_strlen(s);
+		write(1, s, len);
+	}
 	return (len);
 }
 
@@ -32,12 +37,10 @@ int	put_unsign_int(long nb)
 	char	a;
 	int		i;
 
-	if (nb >= 10)
-	{
-		put_unsign_int(nb / 10);
-	}
-	a = (nb % 10) + '0';
 	i = 0;
+	if (nb >= 10)
+		i += put_unsign_int(nb / 10);
+	a = (nb % 10) + '0';
 	i += write (1, &a, 1);
 	return (i);
 }

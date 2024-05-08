@@ -6,22 +6,11 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 10:34:39 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/08 14:15:05 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/08 16:19:14 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	until_per_str(const char *start)
-{
-	int	l_count;
-
-	l_count = 0;
-	while (start[l_count] != '%' && start[l_count])
-		l_count++;
-	write(1, start, l_count);
-	return (l_count);
-}
 
 int	if_per(const char *start, va_list ap, int count)
 {
@@ -41,6 +30,8 @@ int	if_per(const char *start, va_list ap, int count)
 		count += put_hex(va_arg(ap, unsigned int), 1);
 	else if (*start == '%')
 		count += write(1, "%", 1);
+	else if (*start != '\0')
+		count += write(1, start, 1);
 	return (count);
 }
 
@@ -62,6 +53,8 @@ int	ft_printf(const char *format, ...)
 			start++;
 			count = if_per(start, ap, count);
 		}
+		if (!*start)
+			break ;
 		start++;
 	}
 	va_end(ap);

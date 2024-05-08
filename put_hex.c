@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 10:39:36 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/08 14:12:03 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/08 16:21:02 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ int	put_pointer(unsigned long long p)
 		return (l_count);
 	}
 	else
-		l_count += put_hex(p, 0) - 1;
-	l_count += write(1, "\0", 1);
+		l_count += put_hex(p, 0);
 	return (l_count);
 }
