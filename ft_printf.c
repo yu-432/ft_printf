@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 10:34:39 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/08 16:19:14 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/09 12:21:19 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	if_per(const char *start, va_list ap, int count)
 	else if (*start == 'd' || *start == 'i')
 		count += put_nbr(va_arg(ap, int));
 	else if (*start == 'u')
-		count += put_unsign_int((long)va_arg(ap, unsigned int));
+		count += put_unsign_int(va_arg(ap, unsigned int));
 	else if (*start == 'x')
 		count += put_hex(va_arg(ap, unsigned int), 0);
 	else if (*start == 'X')

@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 10:48:58 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/08 16:21:14 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/09 12:21:43 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	put_str(char *s)
 	return (len);
 }
 
-int	put_unsign_int(long nb)
+int	put_unsign_int(unsigned int nb)
 {
 	char	a;
 	int		i;

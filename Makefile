@@ -6,7 +6,7 @@
 #    By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/07 14:59:59 by yooshima          #+#    #+#              #
-#    Updated: 2024/05/08 11:21:50 by yooshima         ###   ########.fr        #
+#    Updated: 2024/05/08 17:37:03 by yooshima         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ clean:
 
 fclean:		clean
 			${RM} ${NAME}
-			$(MAKE) -C $(LIBFT_PATH) clean
+			$(MAKE) -C $(LIBFT_PATH) fclean
 
 re:			fclean all
 
