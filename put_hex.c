@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 10:39:36 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/09 13:20:37 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/09 16:12:09 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	put_hex(unsigned long long nb, int upper)
 	return (count);
 }
 
-int	put_pointer(unsigned long long p)
+int	put_pointer(unsigned long p)
 {
 	int	count;
 
