@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	put_hex(unsigned long long nb, int upper)
+int	put_hex(unsigned long nb, int upper)
 {
 	int	count;
 
