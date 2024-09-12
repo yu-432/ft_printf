@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   put_hex.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: yooshima <yooshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 10:39:36 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/09 16:12:09 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/09/12 22:19:42 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,9 @@ int	put_pointer(unsigned long p)
 	int	count;
 
 	count = 0;
+	if (p == 0 && count == 0)
+		return(write(1, "(nil)", 5));
 	count += write(1, "0x", 2);
-	if (p == 0)
-	{
-		count += write(1, "0", 1);
-		return (count);
-	}
-	else
-		count += put_hex(p, 0);
+	count += put_hex(p, 0);
 	return (count);
 }
